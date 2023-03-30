@@ -1,0 +1,82 @@
+/*
+   Survey Forms Style Sheet
+   Author: Will
+   Date: 03/21/23
+*/
+
+/* Form Layout Styles */
+div.formRow {
+   display: flex;
+   flex-flow: row wrap;
+   margin: 7px 0px;
+}
+
+div.formRow > * {
+   flex: 1 1 150px;
+}
+
+form#survey {
+   display: flex;
+   flex-flow: row wrap;
+}
+
+form#survey > fieldset {
+   background-color: rgb(241, 232, 181);
+   border-radius: 20px;
+   flex: 1 1 300px;
+   font-size: .85em;
+   padding: 10px;
+   margin: 10px
+}
+
+/* Legend Styles */
+legend {
+   background-color: rgb(179, 20, 25);
+   color: white;
+   padding: 5px;
+   border-radius: 10px;
+}
+
+/* Text Area Styles */
+textarea {
+   width: 95%;
+   margin-top: 10px;
+   resize: none;
+}
+
+/* Spinner Styles */
+input#dineSpin {
+   flex: 0 0 50px; 
+}
+
+/* Form Button Styles */
+div#buttons {
+   width: 100%;
+   text-align: center;
+}
+
+input[type="submit"], input[type="reset"] {
+   font-size: 1.2em;
+   padding: 5px;
+   margin: 15px;
+}
+/* Validation Styles */
+input:focus, select:focus, textarea:focus {
+   background-color: rgb(220, 255, 220);
+}
+
+input#cust:focus:valid, input#zip:focus:valid, input#phone:focus:valid, input#mail:focus:valid {
+   background-color: rgb(220, 255, 220);
+   background-image: url("rb_valid.png");
+   background-position: bottom right;
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+input#cust:focus:invalid, input#zip:focus:invalid, input#phone:focus:invalid, input#mail:focus:invalid {
+   background-color: rgb(255, 232 , 233);
+   background-image: url("rb_invalid.png");
+   background-position: bottom right;
+   background-size: contain;
+   background-repeat: no-repeat;
+}
